@@ -11,7 +11,7 @@ This application is built with a high-performance **FastAPI** backend and a mode
 ```mermaid
 graph TD
     %% Upload Pipeline
-    subgraph Upload & Indexing Pipeline
+    subgraph pipeline1["Upload & Indexing Pipeline"]
         A[User Uploads PDFs] --> B[Text Extraction <br/><i>PyPDF</i>]
         B --> C[Overlap Chunking <br/><i>1500 chars / 300 overlap</i>]
         C --> D[Vector Embedding <br/><i>all-mpnet-base-v2</i>]
@@ -19,7 +19,7 @@ graph TD
     end
 
     %% QA Pipeline
-    subgraph Ask & Retrieval Pipeline
+    subgraph pipeline2["Ask & Retrieval Pipeline"]
         F[User Question] --> G[Query Embedding]
         G --> H[Vector Search]
         E --> H
@@ -29,8 +29,8 @@ graph TD
         J --> K[Best Answer + Citations]
     end
 
-    style Upload & Indexing Pipeline fill:#f5f7ff,stroke:#5c7cfa,stroke-width:2px
-    style Ask & Retrieval Pipeline fill:#f3fffd,stroke:#12b886,stroke-width:2px
+    style pipeline1 fill:#f5f7ff,stroke:#5c7cfa,stroke-width:2px
+    style pipeline2 fill:#f3fffd,stroke:#12b886,stroke-width:2px
 ```
 
 ---
