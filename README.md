@@ -1,4 +1,4 @@
-# 🔍 Multi-Document Research Assistant
+# Multi-Document Research Assistant
 
 An intelligent, self-hosted Retrieval-Augmented Generation (RAG) system that allows you to upload multiple PDF documents and perform semantic search and question answering across them simultaneously.
 
@@ -6,7 +6,7 @@ This application is built with a high-performance **FastAPI** backend and a mode
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```mermaid
 graph TD
@@ -35,7 +35,7 @@ graph TD
 
 ---
 
-## ✨ Features
+## Features
 
 - **Multi-PDF Upload & Indexing**: Process multiple large files concurrently.
 - **Context-Preserving Overlap Chunking**: Text is split into overlapping passages to prevent loss of context at boundaries.
@@ -46,7 +46,7 @@ graph TD
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 - **Framework**: FastAPI
@@ -63,7 +63,7 @@ graph TD
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.9 or higher
@@ -134,10 +134,3 @@ graph TD
 Interactive API documentation (Swagger UI) is available at `http://localhost:8000/docs`.
 
 ---
-
-## 🗺️ Future Roadmap
-
-- [ ] **Vector Database Persistence**: Integrate a production-grade database like ChromaDB or pgvector instead of the in-memory array.
-- [ ] **Generative QA (RAG)**: Connect a local LLM (via Ollama) or cloud API (Gemini/OpenAI) for synthesizing conversational answers instead of purely extractive QA.
-- [ ] **OCR Integration**: Implement Tesseract OCR or similar parsing for image-only/scanned PDFs.
-- [ ] **Authentication**: Add user accounts and private document workspaces.
